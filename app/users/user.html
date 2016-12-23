@@ -1,0 +1,29 @@
+<h1>Au bonjour et bienvenu dans la vue des utilisateurs.</h1>
+<div>
+    <table>
+        <thead>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Email</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="user in userCtrl.users">
+                <td ng-bind="user.firstname"></td>
+                <td ng-bind="user.lastname"></td>
+                <td ng-bind="user.email"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<hr>
+<div>
+    <h1>User form</h1>
+    <form name="formCtrl"> 
+        firstname: <input type="text" ng-model="fu.firstname" placeholder="firstname"><br>
+        lastname : <input type="text" ng-model="fu.lastname" value="Baba" placeholder="lastname"><br>
+        email : <input type="email" ng-model="fu.email" value="baba@gmail.com" placeholder="email"><br>
+        username: <input type="text" ng-model="fu.username" value="Bibiche" placeholder="username"><br>
+        passwd : <input type="text" ng-model="fu.passwd" value="boubou" placeholder="passwd"><br>
+        Submit : <input type="submit" ng-click="fu.submitUser()">
+    </form>
+</div>
